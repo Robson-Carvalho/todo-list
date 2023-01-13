@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body, * {
+    font-family: 'Inter', sans-serif;
     box-sizing: border-box;
   }
 `
