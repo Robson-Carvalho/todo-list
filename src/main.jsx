@@ -6,6 +6,16 @@ import { App } from './App'
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
+
+  body {
+    background: #191919;
+    color: #f2f2f2;
+    min-height: 100vh
+  }
+
+  body, * {
+    box-sizing: border-box;
+  }
 `
 
 ReactDOM.createRoot(document.getElementById('root')).render(
