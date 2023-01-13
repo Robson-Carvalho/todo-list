@@ -1,4 +1,5 @@
 import { Section, Header, Div } from './styles'
+import { Task } from '../Task'
 
 export const Tasks = () => {
 
@@ -19,6 +20,7 @@ export const Tasks = () => {
             <span>1 of 10</span>
           </Div>
         </Header>
+        <Task />
       </Section>
     </>
   )
