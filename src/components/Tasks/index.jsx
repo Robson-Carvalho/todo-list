@@ -1,7 +1,7 @@
 import { Section, Header, Div } from './styles'
 import { Task } from '../Task'
 
-export const Tasks = ({ tasks, onCompleted }) => {
+export const Tasks = ({ tasks, onCompleted, onDelete }) => {
   const tasksQuantity = tasks.length
   const completedTasks = tasks.filter(task => task.isCompleted).length
 
@@ -23,7 +23,12 @@ export const Tasks = ({ tasks, onCompleted }) => {
           </Div>
         </Header>
 
-        {tasks.map(task => <Task key={task.id} task={task} onCompleted={onCompleted} onDelete={onDelete} />)}
+        {tasks.map(task => <Task
+          key={task.id}
+          task={task}
+          onCompleted={onCompleted}
+          onDelete={onDelete}
+        />)}
       </Section>
     </>
   )

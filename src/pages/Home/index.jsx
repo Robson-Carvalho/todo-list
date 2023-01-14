@@ -28,12 +28,18 @@ export const Home = () => {
     setTasks(newTask)
   }
 
+  const deleteTaskById = (taskId) => {
+    const newTask = tasks.filter(task => task.id !== taskId)
+    setTasks(newTask)
+  }
+
   return (
     <>
       <Header onHandleAddTask={handleAddTask} />
       <Tasks
         tasks={tasks}
         onCompleted={toggleTaskCompletedById}
+        onDelete={deleteTaskById}
       />
     </>
   )

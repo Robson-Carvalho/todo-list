@@ -2,7 +2,7 @@ import { Container, CheckContainer, DeleteButton, Div } from './styles'
 import { TbTrash } from 'react-icons/tb'
 import { BsFillCheckCircleFill } from "react-icons/bs"
 
-export const Task = ({ task, onCompleted }) => {
+export const Task = ({ task, onCompleted, onDelete }) => {
 
   const styleTaskCompleted = {
     color: "#808080",
@@ -18,7 +18,7 @@ export const Task = ({ task, onCompleted }) => {
 
         <p style={task.isCompleted ? styleTaskCompleted : null}>{task.title}</p>
 
-        <DeleteButton>
+        <DeleteButton onClick={() => onDelete(task.id)}>
           <TbTrash size={20} />
         </DeleteButton>
       </Container>
