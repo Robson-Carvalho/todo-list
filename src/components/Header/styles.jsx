@@ -3,23 +3,24 @@ import styled from 'styled-components'
 export const Container = styled.header`
   background: #0d0d0d;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   height: 200px;
   position: relative;
-  padding: 0 16px;
 `
 
 export const Form = styled.form`
   position: absolute;
   height: 54px;
   bottom: -27px;
-  width: 95%;
+  width: 100%;
   max-width: 736px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  margin: 0 16px !important;
 `
 
 export const Input = styled.input`
