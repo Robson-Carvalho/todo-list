@@ -18,7 +18,7 @@ export const Tasks = ({ tasks, onCompleted, onDelete }) => {
             <span>{tasksQuantity}</span>
           </Div>
           <Div>
-            <p style={tasksQuantity === completedTasks ? isCompleted : null}>Completed</p>
+            <p style={tasksQuantity !== completedTasks ? isCompleted : null}>Completed</p>
             <span>{completedTasks} of {tasksQuantity}</span>
           </Div>
         </Header>
