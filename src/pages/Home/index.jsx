@@ -15,11 +15,25 @@ export const Home = () => {
     setTasks((prevState) => [...prevState, newTask]);
   }
 
+  const toggleTaskCompletedById = (taskId) => {
+    const newTask = tasks.map(task => {
+      if (taskId === task.id) {
+        return {
+          ...task,
+          isCompleted: !task.isCompleted
+        }
+      }
+      return task;
+    })
+    setTasks(newTask)
+  }
+
   return (
     <>
       <Header onHandleAddTask={handleAddTask} />
       <Tasks
         tasks={tasks}
+        onCompleted={toggleTaskCompletedById}
       />
     </>
   )

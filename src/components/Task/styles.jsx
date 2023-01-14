@@ -20,8 +20,8 @@ export const CheckContainer = styled.button`
   border: none;
 
   svg {
-    width: 100%;
-    height: 100%;
+    width: 17.45px;
+    height: 17.45px;
     color: #5E60CE;
   }
 `

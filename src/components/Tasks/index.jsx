@@ -1,7 +1,10 @@
 import { Section, Header, Div } from './styles'
 import { Task } from '../Task'
 
-export const Tasks = ({ tasks }) => {
+export const Tasks = ({ tasks, onCompleted }) => {
+  const tasksQuantity = tasks.length
+  const completedTasks = tasks.filter(task => task.isCompleted).length
+
   const isCompleted = {
     color: '#8284FA',
   }
@@ -12,15 +15,15 @@ export const Tasks = ({ tasks }) => {
         <Header>
           <Div>
             <p>Create tasks</p>
-            <span>10</span>
+            <span>{tasksQuantity}</span>
           </Div>
           <Div>
-            <p style={isCompleted}>Completed</p>
-            <span>1 of 10</span>
+            <p style={tasksQuantity === completedTasks ? isCompleted : null}>Completed</p>
+            <span>{completedTasks} of {tasksQuantity}</span>
           </Div>
         </Header>
 
-        {tasks.map(task => <Task key={task.id} task={task} />)}
+        {tasks.map(task => <Task key={task.id} task={task} onCompleted={onCompleted} onDelete={onDelete} />)}
       </Section>
     </>
   )
