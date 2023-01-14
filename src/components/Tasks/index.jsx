@@ -14,12 +14,12 @@ export const Tasks = ({ tasks, onCompleted, onDelete }) => {
       <Section>
         <Header>
           <Div>
-            <p>Create tasks</p>
+            <p>Tarefas criadas</p>
             <span>{tasksQuantity}</span>
           </Div>
           <Div>
-            <p style={tasksQuantity !== completedTasks ? isCompleted : null}>Completed</p>
-            <span>{completedTasks} of {tasksQuantity}</span>
+            <p style={tasksQuantity !== completedTasks ? isCompleted : null}>Concluída</p>
+            <span>{completedTasks} de {tasksQuantity}</span>
           </Div>
         </Header>
 

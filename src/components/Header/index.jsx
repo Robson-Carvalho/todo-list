@@ -18,13 +18,13 @@ export const Header = ({ onHandleAddTask }) => {
         <img src={logoImg} alt="Logo todo list" />
         <Form onSubmit={handleSubmit}>
           <Input
-            placeholder="Add a new task"
+            placeholder="Adicionar uma nova tarefa"
             type="text"
             value={title}
             onChange={(event) => setTitle(event.target.value)}
           />
           <Button>
-            Create
+            Criar
             <AiOutlinePlusCircle size={20} />
           </Button>
         </Form>
