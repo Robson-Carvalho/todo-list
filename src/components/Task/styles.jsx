@@ -10,6 +10,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+  margin-bottom: 12px;
 `
 
 export const CheckContainer = styled.button`
@@ -18,23 +19,23 @@ export const CheckContainer = styled.button`
   background: none;
   border: none;
 
-  div {
-    width: 17.45px;
-    height: 17.45px;
-    border-radius: 999px;
-    border: 2px solid #4EA8DE;
-    cursor: pointer;
-    transition: outline .02s;
-
-    &:hover{
-      outline: 2px solid rgba(255, 255, 255, 0.3);
-    }
-  }
-
   svg {
     width: 100%;
     height: 100%;
     color: #5E60CE;
+  }
+`
+
+export const Div = styled.div`
+  width: 17.45px;
+  height: 17.45px;
+  border-radius: 999px;
+  border: 2px solid #4EA8DE;
+  cursor: pointer;
+  transition: outline .02s;
+
+  &:hover{
+   outline: 2px solid rgba(255, 255, 255, 0.3);
   }
 `
 

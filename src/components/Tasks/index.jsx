@@ -1,8 +1,7 @@
 import { Section, Header, Div } from './styles'
 import { Task } from '../Task'
 
-export const Tasks = () => {
-
+export const Tasks = ({ tasks }) => {
   const isCompleted = {
     color: '#8284FA',
   }
@@ -16,11 +15,12 @@ export const Tasks = () => {
             <span>10</span>
           </Div>
           <Div>
-            <p>Completed</p>
+            <p style={isCompleted}>Completed</p>
             <span>1 of 10</span>
           </Div>
         </Header>
-        <Task />
+
+        {tasks.map(task => <Task key={task.id} task={task} />)}
       </Section>
     </>
   )

@@ -1,15 +1,15 @@
-import { Container, CheckContainer, DeleteButton } from './styles'
+import { Container, CheckContainer, DeleteButton, Div } from './styles'
 import { TbTrash } from 'react-icons/tb'
 
-export const Task = () => {
+export const Task = ({ task }) => {
   return (
     <>
       <Container>
         <CheckContainer>
-          <div />
+          <Div />
         </CheckContainer>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>{task.title}</p>
 
         <DeleteButton>
           <TbTrash size={20} />
