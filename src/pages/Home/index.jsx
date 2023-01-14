@@ -22,6 +22,14 @@ export const Home = () => {
   }, [])
 
   const handleAddTask = (taskTitle) => {
+    if (!tasks) {
+      postTasksInLocalStorage([{
+        id: crypto.randomUUID(),
+        title: taskTitle,
+        isCompleted: false
+      }])
+    }
+
     postTasksInLocalStorage([...tasks, {
       id: crypto.randomUUID(),
       title: taskTitle,
