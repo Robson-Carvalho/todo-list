@@ -23,7 +23,7 @@ export const Tasks = ({ tasks, onCompleted, onDelete }) => {
           </Div>
         </Header>
 
-        {tasks.map(task => <Task
+        {tasks?.map(task => <Task
           key={task.id}
           task={task}
           onCompleted={onCompleted}
