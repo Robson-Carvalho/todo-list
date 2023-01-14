@@ -29,12 +29,11 @@ export const Home = () => {
         isCompleted: false
       }])
     }
-
-    postTasksInLocalStorage([...tasks, {
+    postTasksInLocalStorage([{
       id: crypto.randomUUID(),
       title: taskTitle,
       isCompleted: false
-    }])
+    }, ...tasks])
   }
 
   const toggleTaskCompletedById = (taskId) => {
@@ -45,6 +44,7 @@ export const Home = () => {
           isCompleted: !task.isCompleted
         }
       }
+
       return task;
     })
     postTasksInLocalStorage(newTask)

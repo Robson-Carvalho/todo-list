@@ -8,8 +8,10 @@ export const Header = ({ onHandleAddTask }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    onHandleAddTask(title)
-    setTitle("")
+    if (title !== "") {
+      onHandleAddTask(title)
+      setTitle("")
+    }
   }
 
   return (
