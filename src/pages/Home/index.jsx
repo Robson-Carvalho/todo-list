@@ -1,25 +1,25 @@
-import { useEffect, useState } from 'react'
-import { Header } from '../../components/Header'
-import { Tasks } from '../../components/Tasks'
+import { useEffect, useState } from "react";
+import { Header } from "../../components/Header";
+import { Tasks } from "../../components/Tasks";
 
-const LOCAL_STORAGE_KEY = "todo:savedTasks"
+const LOCAL_STORAGE_KEY = "todo:savedTasks";
 
 export const Home = () => {
-  const [tasks, setTasks] = useState([])
+  const [tasks, setTasks] = useState([]);
 
   const getTasksInLocalStorage = () => {
-    const saved = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
-    setTasks(saved)
-  }
+    const saved = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+    setTasks(saved);
+  };
 
   const postTasksInLocalStorage = (newTasks) => {
-    setTasks(newTasks)
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newTasks))
-  }
+    setTasks(newTasks);
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newTasks));
+  };
 
   useEffect(() => {
-    getTasksInLocalStorage()
-  }, [])
+    getTasksInLocalStorage();
+  }, []);
 
   const handleAddTask = (taskTitle) => {
     if (!tasks) {
@@ -27,14 +27,14 @@ export const Home = () => {
         id: crypto.randomUUID(),
         title: taskTitle,
         isCompleted: false
-      }])
-    }
+      }]);
+    };
     postTasksInLocalStorage([{
       id: crypto.randomUUID(),
       title: taskTitle,
       isCompleted: false
-    }, ...tasks])
-  }
+    }, ...tasks]);
+  };
 
   const toggleTaskCompletedById = (taskId) => {
     const newTask = tasks.map(task => {
@@ -42,18 +42,17 @@ export const Home = () => {
         return {
           ...task,
           isCompleted: !task.isCompleted
-        }
+        };
       }
-
       return task;
-    })
-    postTasksInLocalStorage(newTask)
-  }
+    });
+    postTasksInLocalStorage(newTask);
+  };
 
   const deleteTaskById = (taskId) => {
-    const newTask = tasks.filter(task => task.id !== taskId)
-    postTasksInLocalStorage(newTask)
-  }
+    const newTask = tasks.filter(task => task.id !== taskId);
+    postTasksInLocalStorage(newTask);
+  };
 
   return (
     <>
@@ -65,4 +64,4 @@ export const Home = () => {
       />
     </>
   )
-}
+};

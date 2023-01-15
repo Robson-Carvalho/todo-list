@@ -1,4 +1,4 @@
-import { css, createGlobalStyle } from 'styled-components'
+import { css, createGlobalStyle } from "styled-components";
 
 // prettier-ignore
 export const reset = css`

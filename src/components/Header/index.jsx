@@ -1,18 +1,18 @@
-import { Container, Form, Input, Button } from './styles'
-import { AiOutlinePlusCircle } from 'react-icons/ai'
-import logoImg from '../../assets/logo.svg'
-import { useState } from 'react'
+import { Container, Form, Input, Button } from "./styles";
+import { AiOutlinePlusCircle } from "react-icons/ai";
+import logoImg from "../../assets/logo.svg";
+import { useState } from "react";
 
 export const Header = ({ onHandleAddTask }) => {
-  const [title, setTitle] = useState("")
+  const [title, setTitle] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
     if (title !== "") {
-      onHandleAddTask(title)
-      setTitle("")
-    }
-  }
+      onHandleAddTask(title);
+      setTitle("");
+    };
+  };
 
   return (
     <>
@@ -33,4 +33,4 @@ export const Header = ({ onHandleAddTask }) => {
       </Container>
     </>
   )
-}
+};
