@@ -21,6 +21,8 @@
 You can view the project layout through [THIS LINK](https://www.figma.com/file/TPpfCmc2zp61ww6SWGnOgd/ToDo-Tutorial?t=6IY1rQESVpNaQ7R1-0). You must have an account at [Figma](https://figma.com) to access it.
 
 
+## Running project
+
 <p align="center">
   <img alt="License" src="https://github.com/Robson-Carvalho/todo-list/blob/main/images/1.png?raw=true">
   <img alt="License" src="https://github.com/Robson-Carvalho/todo-list/blob/main/images/2.png?raw=true">
@@ -36,7 +38,7 @@ Before you begin, you will need to have the following tools installed on your ma
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/).
 It's also nice to have an editor to work with the code like [VSCode](https://code.visualstudio.com/)
 
-### Project running
+### How to run the project?
 
 ```bash
 # Clone this repository
